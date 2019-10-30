@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Spawner.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Програмирование/Товер дефенс/TD_1/TD_1/TD_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
