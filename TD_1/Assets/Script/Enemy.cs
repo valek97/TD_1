@@ -6,16 +6,20 @@ public class Enemy : MonoBehaviour
 {
     
     public float speed = 2f;
+    public float MaxLife = 100f;
 
     private Transform waypoints;
     private Transform waypoint;
     private int waypointIndex = -1;
+    private float life;
 
     // Start is called before the first frame update
     void Start()
     {
         waypoints = GameObject.Find("WayPoint").transform;
         NextWaypoint();
+
+        life = MaxLife;
     }
 
     // Update is called once per frame
@@ -44,4 +48,14 @@ public class Enemy : MonoBehaviour
         }
         waypoint = waypoints.GetChild(waypointIndex);
     }
+
+    public void SetDamage(float value)
+    {
+        life -= value;
+        if (life <= 0 )
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
