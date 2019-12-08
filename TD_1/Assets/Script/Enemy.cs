@@ -6,7 +6,9 @@ public class Enemy : MonoBehaviour
 {
     
     public float speed = 2f;
-    public float MaxLife = 100f;
+    public float MaxLife = 400f;
+
+    public float hp;
 
     private Transform waypoints;
     private Transform waypoint;
