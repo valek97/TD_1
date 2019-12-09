@@ -22,8 +22,13 @@ public class _control : MonoBehaviour
         float forwardMove = Input.GetAxis("Vertical") * moveSpeed;
         float sideMove = Input.GetAxis("Horizontal") * moveSpeed;
         float verticalMove = Input.GetAxis("Jump") * verticalSpeed;
+    
+
+        float UnverticalMove = Input.GetAxis("left ctrl") * -verticalSpeed;
+
         _target.position += _target.forward * forwardMove +
                             _target.right * sideMove +
-                            _target.up * verticalMove;
+                            _target.up * verticalMove +
+                            _target.up * UnverticalMove   ;
     }
 }
