@@ -67,9 +67,12 @@
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\BulletPlayer.cs" />
     <Compile Include="Assets\Script\CameraScript.cs" />
+    <Compile Include="Assets\Script\Economy.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\EnergyRegen.cs" />
     <Compile Include="Assets\Script\HpBar.cs" />
     <Compile Include="Assets\Script\PlayerShot.cs" />
+    <Compile Include="Assets\Script\PlayerStats.cs" />
     <Compile Include="Assets\Script\Spawner.cs" />
     <Compile Include="Assets\Script\Tower.cs" />
     <Compile Include="Assets\Script\TowerPlace.cs" />

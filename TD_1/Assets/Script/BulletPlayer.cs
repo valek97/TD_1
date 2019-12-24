@@ -8,6 +8,7 @@ public class BulletPlayer : MonoBehaviour
     public float TimeLife = 1f;
     public Enemy Enemy;
     public float Damage = 100f;
+    
 
     float timerLife = 0f;
     // Start is called before the first frame update

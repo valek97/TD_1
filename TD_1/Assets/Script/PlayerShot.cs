@@ -11,6 +11,8 @@ public class PlayerShot : MonoBehaviour
     Enemy enemy;
     Transform towerHead;
     float timerShoot = 0f;
+    public float Cost = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,15 +38,54 @@ public class PlayerShot : MonoBehaviour
                 enemy = null;
         }
 
+        PlayerStats bullet = GetComponent<PlayerStats>();
+
+
+
+        if (bullet.Energy > 20)
+        {
+            TimeShoot = 2;
+            Cost = 10;
+        }
+
 
     }
+
+    private void FixedUpdate()
+    {
+       
+    }
+
+
+
+    
 
     // Выстрел
     private void Shoot()
     {
+
+
+        
+        
+
         timerShoot -= Time.deltaTime;
         if (timerShoot <= 0)
         {
+            PlayerStats bullet = GetComponent<PlayerStats>();
+            bullet.Energy -= Cost;  //Вычет энергии затрачиваемой на выстрел
+            if (bullet.Energy <= 20)
+            {
+                Cost = 0;
+                TimeShoot = 10;
+            }
+            else
+            {
+                Cost = 10;
+                TimeShoot = 2;
+            }
+
+
+
             timerShoot = TimeShoot;
             //Создание пули
             GameObject obj = (GameObject)Instantiate(bullet2, towerHead.transform.position, towerHead.transform.rotation);
@@ -52,6 +93,8 @@ public class PlayerShot : MonoBehaviour
             b.Enemy = enemy;
         }
     }
+
+    
     private void FindEnemy()
     {
         var enemies = GameObject.FindObjectsOfType<Enemy>();

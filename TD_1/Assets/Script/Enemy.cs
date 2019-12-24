@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour
         life -= value;
         if (life <= 0 )
         {
+            
             Destroy(gameObject);
         }
     }

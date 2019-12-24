@@ -109,3 +109,4 @@ MonoBehaviour:
   TimeLife: 1
   Enemy: {fileID: 0}
   Damage: 100
+  Cost: 10
